@@ -73,3 +73,7 @@
   font-style: italic;
 }
 
+@theme {
+	--color-dark: #0A0903;
+	--color-lime: #BDE052;
+}
