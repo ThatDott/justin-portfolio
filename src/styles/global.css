@@ -94,6 +94,29 @@ p {
 	font-size: 1rem;
 }
 
+@media (max-width: 450px) {
+	h1 {
+		font-size: 2.25rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	h4 {
+		font-size: 1.125rem;
+	}
+
+	p {
+		font-size: 0.95rem;
+	}
+}
+
+
 @theme {
 	--color-dark: #0A0903;
 	--color-lime: #BDE052;
