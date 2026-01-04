@@ -61,14 +61,17 @@ const currentProjects = [
           >
             <img
               src={project.src}
-              class="w-full h-[150px] rounded-[30px] object-cover hover:-translate-y-[5px] transition duration-500"
+              class="w-full h-[150px] rounded-[30px] object-cover hover:-translate-y-[5px] transition duration-500 glow"
             />
           </a>
           <div class="flex flex-col gap-[10px]">
             <div class="flex flex-row w-full justify-between text-white items-center gap-[10px]">
               <h5 class="h-full font-semibold">{project.title}</h5>
               <a href={project.ghref} target="_blank">
-                <img src="/icons/github-logo.svg" class="h-[24px] w-[48px]" />
+                <img
+                  src="/icons/github-logo.svg"
+                  class="h-[24px] w-[48px] glow duration-500"
+                />
               </a>
             </div>
             <div class="flex flex-col w-full justify-start text-lime gap-[10px]">

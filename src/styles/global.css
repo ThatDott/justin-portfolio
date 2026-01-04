@@ -122,3 +122,16 @@ h4 {
 	--color-dark: #0A0903;
 	--color-lime: #BDE052;
 }
+
+::selection {
+  background-color: #BDE052;
+  color: #000;
+}
+
+img {
+	user-select: none;
+}
+
+.glow:hover {
+  filter: drop-shadow(0 0 10px #BDE052);
+}
