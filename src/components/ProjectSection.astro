@@ -1,0 +1,57 @@
+---
+const projects = [
+  {
+    title: "AWS Cloud Club - UP Mindanao Website",
+    role: "Frontend Developer",
+    src: "",
+    href: "",
+    tags: ["HTML5", "JavaScript"],
+  },
+  {
+    title: "Pagbantay - Volunteer Management System",
+    role: "Full-Stack Developer",
+    src: "",
+    href: "",
+    tags: ["React", "FastAPI"],
+  },
+  {
+    title: "PisoWise - Smart Expense Tracker",
+    role: "Project Lead & Backend Developer",
+    src: "",
+    href: "",
+    tags: ["NextJS", "FastAPI", "AWS"],
+  },
+];
+---
+
+<div class="flex flex-col w-full gap-[40px]">
+  <h1 class="font-dark text-outline text-left">projects i've worked on</h1>
+  <div class="flex flex-col gap-[40px]">
+    {
+      projects.map((project, index) => (
+        <div key="index" class="flex flex-col gap-[20px]">
+          <img
+            src={project.src}
+            class="w-full h-[300px] rounded-[30px] border-1 border-lime"
+          />
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex flex-row h-[20px] w-full justify-between text-white">
+              <h5 class="h-full font-semibold">{project.title}</h5>
+              <img src="/icons/github-logo.svg" class="h-full" />
+            </div>
+            <div class="flex flex-col w-full justify-start text-lime gap-[10px]">
+              <h5 class="font-light">{project.role}</h5>
+              <div class="flex flex-row gap-[10px]">
+                {project.tags.map((tag) => (
+                  <div class="bg-dark rounded-[30px] p-[10px] border-1 border-lime w-fit gap-[]">
+                    <p class="text-lime text-[12px]">{tag}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

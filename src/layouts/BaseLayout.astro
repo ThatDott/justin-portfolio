@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import HeroSection from "../components/HeroSection.astro";
+import ProjectSection from "../components/ProjectSection.astro";
 const { pageTitle } = Astro.props;
 ---
 
@@ -15,8 +16,11 @@ const { pageTitle } = Astro.props;
   </head>
   <body class="flex flex-col bg-dark items-center">
     <Header />
-    <main class="flex flex-col items-center py-[100px] max-w-[800px] px-[20px]">
+    <main
+      class="flex flex-col items-center py-[100px] max-w-[800px] px-[20px] gap-[50px]"
+    >
       <HeroSection />
+      <ProjectSection />
     </main>
   </body>
 </html>
