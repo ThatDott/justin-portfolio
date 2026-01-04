@@ -4,14 +4,16 @@ const pastProjects = [
     title: "AWS Cloud Club - UP Mindanao Website",
     role: "Frontend Developer",
     src: "/projects/awscc-ss.webp",
-    href: "",
+    href: "https://www.awsccupmindanao.org",
+    ghref: "https://github.com/AWS-Learning-Club-UP-Mindanao/AWSCC-Website",
     tags: ["HTML5", "JavaScript"],
   },
   {
     title: "Pagbantay - Volunteer Management System",
     role: "Full-Stack Developer",
     src: "/projects/pagbantay-ss.webp",
-    href: "",
+    href: "https://dbms-pm-007.github.io/pagbantay-fe",
+    ghref: "https://github.com/DBMS-PM-007",
     tags: ["React", "FastAPI"],
   },
   {
@@ -19,6 +21,7 @@ const pastProjects = [
     role: "Project Lead & Backend Developer",
     src: "/projects/pisowise-ss.webp",
     href: "",
+    ghref: "https://github.com/Resibomax/PisoWise",
     tags: ["NextJS", "FastAPI", "AWS"],
   },
 ];
@@ -27,13 +30,11 @@ const currentProjects = [
   {
     title: "Advocacy Website",
     role: "Project Lead & Frontend Developer",
-    href: "",
     tags: ["React", "Webiny CMS", "AWS"],
   },
   {
     title: "Inoras - Smart QR Attendance System",
     role: "Frontend Developer",
-    href: "",
     tags: ["React", "FastAPI", "Docker"],
   },
 ];
@@ -50,14 +51,25 @@ const currentProjects = [
           key="index"
           class="flex flex-col gap-[20px] w-[226px] max-[800px]:w-full max-w-[450px]"
         >
-          <img
-            src={project.src}
-            class="w-full h-[150px] rounded-[30px] object-cover"
-          />
+          <a
+            {...(project.href
+              ? {
+                  href: project.href,
+                  target: "_blank",
+                }
+              : {})}
+          >
+            <img
+              src={project.src}
+              class="w-full h-[150px] rounded-[30px] object-cover hover:-translate-y-[5px] transition duration-500"
+            />
+          </a>
           <div class="flex flex-col gap-[10px]">
-            <div class="flex flex-row h-fit w-full justify-between text-white">
+            <div class="flex flex-row w-full justify-between text-white items-center gap-[10px]">
               <h5 class="h-full font-semibold">{project.title}</h5>
-              <img src="/icons/github-logo.svg" class="h-[24px]" />
+              <a href={project.ghref} target="_blank">
+                <img src="/icons/github-logo.svg" class="h-[24px] w-[48px]" />
+              </a>
             </div>
             <div class="flex flex-col w-full justify-start text-lime gap-[10px]">
               <h5 class="font-light">{project.role}</h5>
