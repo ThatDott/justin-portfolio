@@ -3,21 +3,21 @@ const projects = [
   {
     title: "AWS Cloud Club - UP Mindanao Website",
     role: "Frontend Developer",
-    src: "",
+    src: "/projects/awscc-ss.webp",
     href: "",
     tags: ["HTML5", "JavaScript"],
   },
   {
     title: "Pagbantay - Volunteer Management System",
     role: "Full-Stack Developer",
-    src: "",
+    src: "/projects/pagbantay-ss.webp",
     href: "",
     tags: ["React", "FastAPI"],
   },
   {
     title: "PisoWise - Smart Expense Tracker",
     role: "Project Lead & Backend Developer",
-    src: "",
+    src: "/projects/pisowise-ss.webp",
     href: "",
     tags: ["NextJS", "FastAPI", "AWS"],
   },
@@ -26,18 +26,18 @@ const projects = [
 
 <div class="flex flex-col w-full gap-[40px]">
   <h1 class="font-dark text-outline text-left">projects i've worked on</h1>
-  <div class="flex flex-col gap-[40px]">
+  <div class="flex flex-row flex-wrap gap-[40px]">
     {
       projects.map((project, index) => (
-        <div key="index" class="flex flex-col gap-[20px]">
+        <div key="index" class="flex flex-col gap-[20px] w-[226px]">
           <img
             src={project.src}
-            class="w-full h-[300px] rounded-[30px] border-1 border-lime"
+            class="w-full h-[150px] rounded-[30px] object-cover"
           />
           <div class="flex flex-col gap-[10px]">
-            <div class="flex flex-row h-[20px] w-full justify-between text-white">
+            <div class="flex flex-row h-fit w-full justify-between text-white">
               <h5 class="h-full font-semibold">{project.title}</h5>
-              <img src="/icons/github-logo.svg" class="h-full" />
+              <img src="/icons/github-logo.svg" class="h-[24px]" />
             </div>
             <div class="flex flex-col w-full justify-start text-lime gap-[10px]">
               <h5 class="font-light">{project.role}</h5>
