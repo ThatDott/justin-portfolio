@@ -1,5 +1,5 @@
 ---
-const projects = [
+const pastProjects = [
   {
     title: "AWS Cloud Club - UP Mindanao Website",
     role: "Frontend Developer",
@@ -22,13 +22,28 @@ const projects = [
     tags: ["NextJS", "FastAPI", "AWS"],
   },
 ];
+
+const currentProjects = [
+  {
+    title: "Advocacy Website",
+    role: "Project Lead & Frontend Developer",
+    href: "",
+    tags: ["HTML5", "JavaScript"],
+  },
+  {
+    title: "Inoras - Smart QR Attendance System",
+    role: "Frontend Developer",
+    href: "",
+    tags: ["React", "FastAPI"],
+  },
+];
 ---
 
 <div class="flex flex-col w-full gap-[40px]">
-  <h1 class="font-dark text-outline text-left">projects i've worked on</h1>
+  <h2 class="text-lime font-bold">projects i've worked on</h2>
   <div class="flex flex-row flex-wrap gap-[40px]">
     {
-      projects.map((project, index) => (
+      pastProjects.map((project, index) => (
         <div key="index" class="flex flex-col gap-[20px] w-[226px]">
           <img
             src={project.src}
@@ -42,6 +57,37 @@ const projects = [
             <div class="flex flex-col w-full justify-start text-lime gap-[10px]">
               <h5 class="font-light">{project.role}</h5>
               <div class="flex flex-row gap-[10px]">
+                {project.tags.map((tag) => (
+                  <div class="bg-dark rounded-[30px] p-[10px] border-1 border-lime w-fit gap-[]">
+                    <p class="text-lime text-[12px]">{tag}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  {/* Projects in Progress */}
+  <h2 class="font-dark text-outline font-bold text-center">
+    currently cooking
+  </h2>
+  <div class="flex flex-row flex-wrap gap-[40px]">
+    {
+      currentProjects.map((project, index) => (
+        <div
+          key="index"
+          class="flex flex-col gap-[20px] w-[360px] border-1 border-lime rounded-[30px] p-[20px] justify-center text-center"
+        >
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex flex-row h-fit w-full text-white justify-center">
+              <h5 class="h-full font-semibold">{project.title}</h5>
+            </div>
+            <div class="flex flex-col w-full justify-start text-lime gap-[10px]">
+              <h5 class="font-light">{project.role}</h5>
+              <div class="flex flex-row gap-[10px] justify-center">
                 {project.tags.map((tag) => (
                   <div class="bg-dark rounded-[30px] p-[10px] border-1 border-lime w-fit gap-[]">
                     <p class="text-lime text-[12px]">{tag}</p>
