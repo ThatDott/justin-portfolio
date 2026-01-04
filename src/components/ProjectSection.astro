@@ -28,23 +28,28 @@ const currentProjects = [
     title: "Advocacy Website",
     role: "Project Lead & Frontend Developer",
     href: "",
-    tags: ["HTML5", "JavaScript"],
+    tags: ["React", "Webiny CMS", "AWS"],
   },
   {
     title: "Inoras - Smart QR Attendance System",
     role: "Frontend Developer",
     href: "",
-    tags: ["React", "FastAPI"],
+    tags: ["React", "FastAPI", "Docker"],
   },
 ];
 ---
 
 <div class="flex flex-col w-full gap-[40px]">
-  <h2 class="text-lime font-bold">projects i've worked on</h2>
-  <div class="flex flex-row flex-wrap gap-[40px]">
+  <h2 class="text-lime font-bold max-[800px]:text-center">
+    projects i've worked on
+  </h2>
+  <div class="flex flex-row flex-wrap gap-[40px] max-[800px]:justify-center">
     {
       pastProjects.map((project, index) => (
-        <div key="index" class="flex flex-col gap-[20px] w-[226px]">
+        <div
+          key="index"
+          class="flex flex-col gap-[20px] w-[226px] max-[800px]:w-full max-w-[450px]"
+        >
           <img
             src={project.src}
             class="w-full h-[150px] rounded-[30px] object-cover"
@@ -74,12 +79,12 @@ const currentProjects = [
   <h2 class="font-dark text-outline font-bold text-center">
     currently cooking
   </h2>
-  <div class="flex flex-row flex-wrap gap-[40px]">
+  <div class="flex flex-row flex-wrap gap-[40px] max-[800px]:justify-center">
     {
       currentProjects.map((project, index) => (
         <div
           key="index"
-          class="flex flex-col gap-[20px] w-[360px] border-1 border-lime rounded-[30px] p-[20px] justify-center text-center"
+          class="flex flex-col gap-[20px] w-[360px] max-[800px]:w-full max-w-[450px] border-1 border-lime rounded-[30px] p-[20px] justify-center text-center"
         >
           <div class="flex flex-col gap-[10px]">
             <div class="flex flex-row h-fit w-full text-white justify-center">
