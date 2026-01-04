@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const links = [
   {
     href: "https://github.com/ThatDott",
@@ -29,7 +31,14 @@ const links = [
     {
       links.map((link, index) => (
         <a class="aspect-square h-full" key={index} href={link.href}>
-          <img src={link.src} alt={link.alt} class="aspect-square h-full" />
+          <Image
+            src={link.src}
+            alt={link.alt}
+            height="24px"
+            width="24px"
+            loading="eager"
+            class="aspect-square h-full"
+          />
         </a>
       ))
     }

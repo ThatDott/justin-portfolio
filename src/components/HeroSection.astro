@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const techs = [
   {
     src: "/icons/react-logo.svg",
@@ -41,8 +43,12 @@ const techs = [
   >
     {/* Left */}
     <div class="w-full">
-      <img
+      <Image
+        alt="Pic of Justin Veloso"
         src="/hero-image.png"
+        height="1480px"
+        width="1248px"
+        loading="eager"
         class="min-[450px]:h-[100%] w-full object-cover rounded-[30px] h-[200px]"
       />
     </div>
@@ -72,10 +78,13 @@ const techs = [
   >
     {
       techs.map((tech, index) => (
-        <img
+        <Image
           key={index}
           alt={tech.alt}
           src={tech.src}
+          width="100px"
+          height="100px"
+          loading="eager"
           class="min-[450px]:w-full w-[40px]"
         />
       ))
