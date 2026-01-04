@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+
+const orgs = [
+  {
+    sname: "SPARCS",
+    lname:
+      "UP Mindanao Society of Programmers And Refined Computer Scientists ",
+    position: "Logistics & Finance Member",
+    src: "/orgs/sparcs-logo.webp",
+  },
+  {
+    sname: "AWSCC",
+    lname: "AWS Cloud Club - UP Mindanao",
+    position: "Software & Web Development Head",
+    src: "/orgs/awscc-logo.webp",
+  },
+];
+---
+
+<div class="flex flex-col w-full gap-[40px]">
+  <h1 class="text-lime font-bold max-[800px]:text-center">organizations</h1>
+  <div class="flex flex-row flex-wrap gap-[40px] max-[800px]:justify-center">
+    {
+      orgs.map((org, index) => (
+        <div
+          key={index}
+          class="flex flex-col gap-[20px] w-[360px] max-[800px]:w-full max-w-[450px] p-[20px] rounded-[30px] border-1 border-lime items-center"
+        >
+          <Image
+            src={org.src}
+            width="300px"
+            height="300px"
+            class="w-full max-w-[150px] rounded-[30px] object-cover"
+            alt="Org Img"
+          />
+          <div class="flex flex-col gap-[10px] text-center">
+            <h3 class="h-full font-semibold text-white">{org.sname}</h3>
+            <h5 class="h-full ubuntu-medium-italic text-white">{org.lname}</h5>
+            <h5 class="font-light text-lime">{org.position}</h5>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
