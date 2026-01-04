@@ -1,5 +1,38 @@
 ---
-
+const techs = [
+  {
+    src: "/icons/react-logo.svg",
+    alt: "React",
+  },
+  {
+    src: "/icons/next-logo.svg",
+    alt: "NextJS",
+  },
+  {
+    src: "/icons/github-logo.svg",
+    alt: "Github",
+  },
+  {
+    src: "/icons/fastapi-logo.svg",
+    alt: "FastAPI",
+  },
+  {
+    src: "/icons/python-logo.svg",
+    alt: "Python",
+  },
+  {
+    src: "/icons/figma-logo.svg",
+    alt: "Figma",
+  },
+  {
+    src: "/icons/docker-logo.svg",
+    alt: "Docker",
+  },
+  {
+    src: "/icons/aws-logo.svg",
+    alt: "AWS",
+  },
+];
 ---
 
 <div class="flex flex-col w-full">
@@ -34,5 +67,18 @@
   </div>
 
   {/* Bottom */}
-  <div class="flex flex-row"></div>
+  <div
+    class="flex flex-row min-[450px]:flex-nowrap flex-wrap w-full h-[100px] py-[20px] gap-[20px] justify-center"
+  >
+    {
+      techs.map((tech, index) => (
+        <img
+          key={index}
+          alt={tech.alt}
+          src={tech.src}
+          class="min-[450px]:w-full w-[40px]"
+        />
+      ))
+    }
+  </div>
 </div>
