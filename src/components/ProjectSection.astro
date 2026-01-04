@@ -1,0 +1,134 @@
+---
+import { Image } from "astro:assets";
+
+const pastProjects = [
+  {
+    title: "AWS Cloud Club - UP Mindanao Website",
+    role: "Frontend Developer",
+    src: "/projects/awscc-ss.webp",
+    href: "https://www.awsccupmindanao.org",
+    ghref: "https://github.com/AWS-Learning-Club-UP-Mindanao/AWSCC-Website",
+    tags: ["HTML5", "JavaScript"],
+  },
+  {
+    title: "Pagbantay - Volunteer Management System",
+    role: "Full-Stack Developer",
+    src: "/projects/pagbantay-ss.webp",
+    href: "https://dbms-pm-007.github.io/pagbantay-fe",
+    ghref: "https://github.com/DBMS-PM-007",
+    tags: ["React", "FastAPI"],
+  },
+  {
+    title: "PisoWise - Smart Expense Tracker",
+    role: "Project Lead & Backend Developer",
+    src: "/projects/pisowise-ss.webp",
+    href: "",
+    ghref: "https://github.com/Resibomax/PisoWise",
+    tags: ["NextJS", "FastAPI", "AWS"],
+  },
+];
+
+const currentProjects = [
+  {
+    title: "Advocacy Website",
+    role: "Project Lead & Frontend Developer",
+    tags: ["React", "Webiny CMS", "AWS"],
+  },
+  {
+    title: "Inoras - Smart QR Attendance System",
+    role: "Frontend Developer",
+    tags: ["React", "FastAPI", "Docker"],
+  },
+];
+---
+
+<div class="flex flex-col w-full gap-[40px]">
+  <h2 class="text-lime font-bold max-[800px]:text-center">
+    projects i've worked on
+  </h2>
+  <div class="flex flex-row flex-wrap gap-[40px] max-[800px]:justify-center">
+    {
+      pastProjects.map((project, index) => (
+        <div
+          key={index}
+          class="flex flex-col gap-[20px] w-[226px] max-[800px]:w-full max-w-[450px]"
+        >
+          <a
+            {...(project.href
+              ? {
+                  href: project.href,
+                  target: "_blank",
+                }
+              : {})}
+            aria-label="Project Link"
+          >
+            <Image
+              src={project.src}
+              width="1560px"
+              height="600px"
+              class="w-full h-[150px] rounded-[30px] object-cover hover:-translate-y-[5px] transition duration-500 glow"
+              alt="Project Img"
+              loading="eager"
+            />
+          </a>
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex flex-row w-full justify-between text-white items-center gap-[10px]">
+              <h5 class="h-full font-semibold">{project.title}</h5>
+              <a href={project.ghref} target="_blank" aria-label="Github Link">
+                <Image
+                  src="/icons/github-logo.svg"
+                  width="24px"
+                  height="24px"
+                  class="h-[24px] w-[48px] glow duration-500"
+                  alt="Github"
+                  loading="eager"
+                />
+              </a>
+            </div>
+            <div class="flex flex-col w-full justify-start text-lime gap-[10px]">
+              <h5 class="font-light">{project.role}</h5>
+              <div class="flex flex-row gap-[10px]">
+                {project.tags.map((tag) => (
+                  <div class="bg-dark rounded-[30px] p-[10px] border-1 border-lime w-fit gap-[]">
+                    <p class="text-lime text-[12px]">{tag}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  {/* Projects in Progress */}
+  <h2 class="font-dark text-outline font-bold text-center">
+    currently cooking
+  </h2>
+  <div class="flex flex-row flex-wrap gap-[40px] max-[800px]:justify-center">
+    {
+      currentProjects.map((project, index) => (
+        <div
+          key="index"
+          class="flex flex-col gap-[20px] w-[360px] max-[800px]:w-full max-w-[450px] border-1 border-lime rounded-[30px] p-[20px] justify-center text-center"
+        >
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex flex-row h-fit w-full text-white justify-center">
+              <h5 class="h-full font-semibold">{project.title}</h5>
+            </div>
+            <div class="flex flex-col w-full justify-start text-lime gap-[10px]">
+              <h5 class="font-light">{project.role}</h5>
+              <div class="flex flex-row gap-[10px] justify-center">
+                {project.tags.map((tag) => (
+                  <div class="bg-dark rounded-[30px] p-[10px] border-1 border-lime w-fit gap-[]">
+                    <p class="text-lime text-[12px]">{tag}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+
+const techs = [
+  {
+    src: "/icons/react-logo.svg",
+    alt: "React",
+  },
+  {
+    src: "/icons/next-logo.svg",
+    alt: "NextJS",
+  },
+  {
+    src: "/icons/github-logo.svg",
+    alt: "Github",
+  },
+  {
+    src: "/icons/fastapi-logo.svg",
+    alt: "FastAPI",
+  },
+  {
+    src: "/icons/python-logo.svg",
+    alt: "Python",
+  },
+  {
+    src: "/icons/figma-logo.svg",
+    alt: "Figma",
+  },
+  {
+    src: "/icons/docker-logo.svg",
+    alt: "Docker",
+  },
+  {
+    src: "/icons/aws-logo.svg",
+    alt: "AWS",
+  },
+];
+---
+
+<div class="flex flex-col w-full">
+  <div
+    class="flex min-[450px]:flex-row flex-col-reverse gap-[20px] min-[450px]:max-h-[260px]"
+  >
+    {/* Left */}
+    <div class="w-full">
+      <Image
+        alt="Pic of Justin Veloso"
+        src="/hero-image.png"
+        height="1480px"
+        width="1248px"
+        loading="eager"
+        class="min-[450px]:h-[100%] w-full object-cover rounded-[30px] h-[200px]"
+      />
+    </div>
+
+    {/* Right */}
+    <div
+      class="flex flex-col w-full min-[450px]:text-right text-left min-[450px]:items-end items-left justify-center gap-[10px]"
+    >
+      <div class="flex flex-col w-[240px]">
+        <h5 class="text-white w-full text-left font-[600]">HELLO!</h5>
+        <h1 class="text-lime min-[450px]:leading-[60px] leading-[40px]">
+          <span class="text-white">I'm</span>
+          Justin Veloso
+        </h1>
+      </div>
+      <h4 class="text-lime font-[600]">FULL-STACK DEVELOPER</h4>
+      <p class="text-white">
+        I build responsive user interfaces and scalable backend APIs using
+        React, Next.js, FastAPI, and AWS.
+      </p>
+    </div>
+  </div>
+
+  {/* Bottom */}
+  <div
+    class="flex flex-row min-[450px]:flex-nowrap flex-wrap w-full h-[100px] py-[20px] gap-[20px] justify-center"
+  >
+    {
+      techs.map((tech, index) => (
+        <Image
+          key={index}
+          alt={tech.alt}
+          src={tech.src}
+          width="100px"
+          height="100px"
+          loading="eager"
+          class="min-[450px]:w-full w-[40px]"
+        />
+      ))
+    }
+  </div>
+</div>

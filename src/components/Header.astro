@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const links = [
   {
     href: "https://github.com/ThatDott",
@@ -15,29 +17,35 @@ const links = [
     src: "/icons/gmail-logo.svg",
     alt: "Gmail",
   },
-]
+];
 ---
 
 <div class="fixed flex flex-row justify-between w-screen h-[64px] p-[20px]">
-	{/* Left */}
-	<div class="flex h-full w-full items-center ubuntu-mono-regular text-white">
-		<p>JUSTIN VELOSO</p>
-	</div>
+  {/* Left */}
+  <div class="flex h-full w-full items-center ubuntu-mono-regular text-white">
+    <p>JUSTIN VELOSO</p>
+  </div>
 
-	{/* Right */}
-	<div class="flex flex-row justify-end h-full w-full items-center gap-[20px]">
-		{links.map((link, index) => (
-		<a
-			class="aspect-square h-full"
-			key={index}
-			href={link.href}
-		>
-			<img 
-				src={link.src}
-				alt={link.alt}
-				class="aspect-square h-full"
-			>
-		</a>
-		))}
-	</div>
+  {/* Right */}
+  <div class="flex flex-row justify-end h-full w-full items-center gap-[20px]">
+    {
+      links.map((link, index) => (
+        <a
+          class="aspect-square h-full"
+          key={index}
+          href={link.href}
+          target="_blank"
+        >
+          <Image
+            src={link.src}
+            alt={link.alt}
+            height="24px"
+            width="24px"
+            loading="eager"
+            class="aspect-square h-full"
+          />
+        </a>
+      ))
+    }
+  </div>
 </div>

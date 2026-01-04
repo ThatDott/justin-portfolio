@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import "tailwindcss";
 
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;
@@ -73,7 +73,65 @@
   font-style: italic;
 }
 
+.text-outline {
+	-webkit-text-stroke: 1px #BDE052;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+}
+
+
+@media (max-width: 450px) {
+	h1 {
+		font-size: 2.25rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	h4 {
+		font-size: 1.125rem;
+	}
+
+	p {
+		font-size: 0.95rem;
+	}
+}
+
+
 @theme {
 	--color-dark: #0A0903;
 	--color-lime: #BDE052;
+}
+
+::selection {
+  background-color: #BDE052;
+  color: #000;
+}
+
+img {
+	user-select: none;
+}
+
+.glow:hover {
+  filter: drop-shadow(0 0 10px #BDE052);
 }
