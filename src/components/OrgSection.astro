@@ -16,6 +16,8 @@ const orgs = [
     src: "/orgs/awscc-logo.webp",
   },
 ];
+
+const img = (path) => `/justin-portfolio/${path}`;
 ---
 
 <div class="flex flex-col w-full gap-[40px]">
@@ -28,7 +30,7 @@ const orgs = [
           class="flex flex-col gap-[20px] w-[360px] max-[800px]:w-full max-w-[450px] p-[20px] rounded-[30px] border-1 border-lime items-center"
         >
           <Image
-            src={org.src}
+            src={img(org.src)}
             width="300px"
             height="300px"
             class="w-full max-w-[150px] rounded-[30px] object-cover"

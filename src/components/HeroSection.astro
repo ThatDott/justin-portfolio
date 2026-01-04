@@ -35,6 +35,8 @@ const techs = [
     alt: "AWS",
   },
 ];
+
+const img = (path) => `/justin-portfolio/${path}`;
 ---
 
 <div class="flex flex-col w-full">
@@ -45,7 +47,7 @@ const techs = [
     <div class="w-full">
       <Image
         alt="Pic of Justin Veloso"
-        src="/hero-image.png"
+        src={img("hero-image.png")}
         height="1480px"
         width="1248px"
         loading="eager"
@@ -81,7 +83,7 @@ const techs = [
         <Image
           key={index}
           alt={tech.alt}
-          src={tech.src}
+          src={img(tech.src)}
           width="100px"
           height="100px"
           loading="eager"

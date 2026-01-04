@@ -1,23 +1,23 @@
 ---
-import { Image } from "astro:assets";
-
 const links = [
   {
     href: "https://github.com/ThatDott",
-    src: "/icons/github-logo.svg",
+    src: "icons/github-logo.svg",
     alt: "GitHub",
   },
   {
     href: "https://www.linkedin.com/in/justin-veloso-21395b27b/",
-    src: "/icons/linkedin-logo.svg",
+    src: "icons/linkedin-logo.svg",
     alt: "LinkedIn",
   },
   {
     href: "mailto:justinsanveloso.work@gmail.com",
-    src: "/icons/gmail-logo.svg",
+    src: "icons/gmail-logo.svg",
     alt: "Gmail",
   },
 ];
+
+const img = (path) => `/justin-portfolio/${path}`;
 ---
 
 <div class="fixed flex flex-row justify-between w-screen h-[64px] p-[20px]">
@@ -36,12 +36,9 @@ const links = [
           href={link.href}
           target="_blank"
         >
-          <Image
-            src={link.src}
+          <img
+            src={img(link.src)}
             alt={link.alt}
-            height="24px"
-            width="24px"
-            loading="eager"
             class="aspect-square h-full"
           />
         </a>
