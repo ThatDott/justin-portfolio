@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { assetUrl } from "../utils/assetUrl.ts";
 
 const techs = [
   {
@@ -35,8 +36,6 @@ const techs = [
     alt: "AWS",
   },
 ];
-
-const img = (path) => `/justin-portfolio/${path}`;
 ---
 
 <div class="flex flex-col w-full">
@@ -47,7 +46,7 @@ const img = (path) => `/justin-portfolio/${path}`;
     <div class="w-full">
       <Image
         alt="Pic of Justin Veloso"
-        src={img("hero-image.png")}
+        src={assetUrl("hero-image.png")}
         height="1480px"
         width="1248px"
         loading="eager"
@@ -83,7 +82,7 @@ const img = (path) => `/justin-portfolio/${path}`;
         <Image
           key={index}
           alt={tech.alt}
-          src={img(tech.src)}
+          src={assetUrl(tech.src)}
           width="100px"
           height="100px"
           loading="eager"
