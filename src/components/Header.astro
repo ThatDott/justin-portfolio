@@ -1,4 +1,6 @@
 ---
+import { assetUrl } from "../utils/assetUrl.ts";
+
 const links = [
   {
     href: "https://github.com/ThatDott",
@@ -16,8 +18,6 @@ const links = [
     alt: "Gmail",
   },
 ];
-
-const img = (path) => `/justin-portfolio/${path}`;
 ---
 
 <div class="fixed flex flex-row justify-between w-screen h-[64px] p-[20px]">
@@ -37,7 +37,7 @@ const img = (path) => `/justin-portfolio/${path}`;
           target="_blank"
         >
           <img
-            src={img(link.src)}
+            src={assetUrl(link.src)}
             alt={link.alt}
             class="aspect-square h-full"
           />

@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { assetUrl } from "../utils/assetUrl.ts";
 
 const pastProjects = [
   {
@@ -40,8 +41,6 @@ const currentProjects = [
     tags: ["React", "FastAPI", "Docker"],
   },
 ];
-
-const img = (path) => `/justin-portfolio/${path}`;
 ---
 
 <div class="flex flex-col w-full gap-[40px]">
@@ -65,7 +64,7 @@ const img = (path) => `/justin-portfolio/${path}`;
             aria-label="Project Link"
           >
             <Image
-              src={img(project.src)}
+              src={assetUrl(project.src)}
               width="1560px"
               height="600px"
               class="w-full h-[150px] rounded-[30px] object-cover hover:-translate-y-[5px] transition duration-500 glow"
@@ -78,7 +77,7 @@ const img = (path) => `/justin-portfolio/${path}`;
               <h5 class="h-full font-semibold">{project.title}</h5>
               <a href={project.ghref} target="_blank" aria-label="Github Link">
                 <img
-                  src={img("/icons/github-logo.svg")}
+                  src={assetUrl("/icons/github-logo.svg")}
                   class="h-[24px] w-[48px] glow duration-500"
                   alt="Github"
                 />
