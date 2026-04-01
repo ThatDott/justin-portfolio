@@ -27,6 +27,14 @@ const pastProjects = [
     ghref: "https://github.com/Resibomax/PisoWise",
     tags: ["NextJS", "FastAPI", "AWS"],
   },
+  {
+    title: "Inoras - Smart QR Attendance System",
+    role: "Frontend Developer",
+    src: "/projects/inoras-ss.webp",
+    href: "",
+    ghref: "https://github.com/UP-Mindanao-ITO/ito-inoras",
+    tags: ["React", "FastAPI", "Docker"],
+  },
 ];
 
 const currentProjects = [
@@ -34,11 +42,6 @@ const currentProjects = [
     title: "Advocacy Website",
     role: "Project Lead & Frontend Developer",
     tags: ["React", "Webiny CMS", "AWS"],
-  },
-  {
-    title: "Inoras - Smart QR Attendance System",
-    role: "Frontend Developer",
-    tags: ["React", "FastAPI", "Docker"],
   },
 ];
 ---
@@ -103,7 +106,7 @@ const currentProjects = [
   <h2 class="font-dark text-outline font-bold text-center">
     currently cooking
   </h2>
-  <div class="flex flex-row flex-wrap gap-[40px] max-[800px]:justify-center">
+  <div class="flex flex-row flex-wrap gap-[40px] justify-center">
     {
       currentProjects.map((project, index) => (
         <div
