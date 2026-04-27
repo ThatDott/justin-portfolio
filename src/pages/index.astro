@@ -3,6 +3,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Justin's Portfolio";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <h2>Portfolio nako ni</h2>
-</BaseLayout>
+<div id="smooth-wrapper">
+  <div id="smooth-content" class="flex justify-center">
+    <BaseLayout pageTitle={pageTitle} />
+  </div>
+</div>
+
+<script>
+  import "../scripts/scroll-smoother.js";
+</script>
