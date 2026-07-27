@@ -57,7 +57,7 @@ const currentProjects = [
 ---
 
 <div class="flex flex-col w-full gap-[40px]">
-  <h1 class="text-lime font-bold max-[800px]:text-center">
+  <h1 class="text-lime font-bold max-[800px]:text-center onest-bold">
     projects i've worked on
   </h1>
   <div class="flex flex-row flex-wrap gap-[40px] max-[800px]:justify-center">
@@ -87,7 +87,7 @@ const currentProjects = [
           </a>
           <div class="flex flex-col gap-[10px]">
             <div class="flex flex-row w-full justify-between text-white items-center gap-[10px]">
-              <h5 class="h-full font-semibold">{project.title}</h5>
+              <h5 class="h-full font-semibold onest-regular">{project.title}</h5>
               <a href={project.ghref} target="_blank" aria-label="Github Link">
                 <img
                   src={assetUrl("/icons/github-logo.svg")}
@@ -97,11 +97,11 @@ const currentProjects = [
               </a>
             </div>
             <div class="flex flex-col w-full justify-start text-lime gap-[10px]">
-              <h5 class="font-light">{project.role}</h5>
+              <h5 class="biz-regular font-light">{project.role}</h5>
               <div class="flex flex-row gap-[10px]">
                 {project.tags.map((tag) => (
                   <div class="bg-dark rounded-[30px] p-[10px] border-1 border-lime w-fit gap-[]">
-                    <p class="text-lime text-[12px]">{tag}</p>
+                    <p class="text-lime text-[12px] onest-regular">{tag}</p>
                   </div>
                 ))}
               </div>
@@ -113,7 +113,7 @@ const currentProjects = [
   </div>
 
   {/* Projects in Progress */}
-  <h2 class="font-dark text-outline font-bold text-center">
+  <h2 class="font-dark text-outline font-bold text-center onest-bold">
     currently cooking
   </h2>
   <div class="flex flex-row flex-wrap gap-[40px] justify-center">
@@ -128,11 +128,11 @@ const currentProjects = [
               <h5 class="h-full font-semibold">{project.title}</h5>
             </div>
             <div class="flex flex-col w-full justify-start text-lime gap-[10px]">
-              <h5 class="font-light">{project.role}</h5>
+              <h5 class="font-light biz-regular">{project.role}</h5>
               <div class="flex flex-row gap-[10px] justify-center">
                 {project.tags.map((tag) => (
                   <div class="bg-dark rounded-[30px] p-[10px] border-1 border-lime w-fit gap-[]">
-                    <p class="text-lime text-[12px]">{tag}</p>
+                    <p class="text-lime text-[12px] onest-regular">{tag}</p>
                   </div>
                 ))}
               </div>
