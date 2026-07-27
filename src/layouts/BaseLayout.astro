@@ -5,6 +5,7 @@ import HeroSection from "../components/HeroSection.astro";
 import ProjectSection from "../components/ProjectSection.astro";
 import OrgSection from "../components/OrgSection.astro";
 import Footer from "../components/Footer.astro";
+import Overlay from "../components/Overlay.astro";
 const { pageTitle } = Astro.props;
 ---
 
@@ -27,6 +28,6 @@ const { pageTitle } = Astro.props;
       <Footer />
     </main>
 
-    <div class="overlay"></div>
+  <Overlay/>
   </body>
 </html>

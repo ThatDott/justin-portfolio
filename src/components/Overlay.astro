@@ -1,0 +1,24 @@
+---
+
+import { Image } from "astro:assets";
+import { assetUrl } from "../utils/assetUrl.ts";
+
+const overlayUrl = "/overlay.png"
+const resolvedUrl = assetUrl(overlayUrl);
+
+---
+
+
+<div
+  style={{
+    position: "fixed",
+    inset: "0",
+    backgroundImage: `url(${resolvedUrl})`,
+    backgroundSize: "450px",
+    backgroundRepeat: "repeat",
+    zIndex: 99,
+    opacity: 0.4,
+    pointerEvents: "none",
+  }}
+/>
+
