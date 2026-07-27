@@ -6,6 +6,7 @@ import ProjectSection from "../components/ProjectSection.astro";
 import OrgSection from "../components/OrgSection.astro";
 import Footer from "../components/Footer.astro";
 import Overlay from "../components/Overlay.astro";
+import ParallaxBackground from "../components/ParallaxBackground.astro";
 const { pageTitle } = Astro.props;
 ---
 
@@ -20,7 +21,7 @@ const { pageTitle } = Astro.props;
   <body class="flex flex-col bg-dark items-center">
     <Header />
     <main
-      class="flex flex-col items-center py-[100px] max-w-[800px] px-[20px] gap-[80px]"
+      class="relative flex flex-col items-center py-[100px] max-w-[800px] px-[20px] gap-[80px]"
     >
       <HeroSection />
       <ProjectSection />
@@ -28,6 +29,7 @@ const { pageTitle } = Astro.props;
       <Footer />
     </main>
 
+  <ParallaxBackground />
   <Overlay/>
   </body>
 </html>
